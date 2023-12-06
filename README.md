@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Monaco TextField Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Monaco TextField Editor is a Chrome extension that enables users to edit text fields on web pages using the Monaco Editor - a code editor that powers VS Code. This extension is perfect for those who require advanced text editing capabilities within their browser, such as syntax highlighting, auto-formatting, and a richer text editing experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Use the Monaco Editor to edit HTML inputs and textareas
+- Support for multiple programming languages including JSON, JavaScript, TypeScript, HTML, CSS, Markdown, Python, XML, and Plain Text
+- Easily switch between different syntax highlighting
+- Context menu integration for quick access to the editor
+- Keyboard shortcut support to instantly open the editor
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The extension is not listed in the Chrome Web Store; hence, it needs to be installed manually:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Download the extension's source code and build the React popup application.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable "Developer mode" in the upper right corner.
+4. Click on "Load unpacked" and select the `extension` folder where you built the extension.
+5. Once loaded, the extension will be available for use in Chrome.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Right-click on any editable text field on a webpage and select "Edit with Monaco Textfield Editor" from the context menu.
+- Alternatively, use the keyboard shortcut `Ctrl+M` (or `Command+M` for Mac) to open the Monaco Editor for the currently focused text field.
+- Edit your text with enhanced features provided by the Monaco Editor.
+- Once you're done editing, click on "SAVE" or use the `Ctrl+S` shortcut to apply the changes to the original text field on the webpage.
 
-### `npm run build`
+## Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This extension uses TypeScript for the Chrome extension scripts and React for the popup editor interface, along with TailwindCSS for styling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Building the React Popup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You need to build the React application before it can be used by the Chrome extension.
 
-### `npm run eject`
+```bash
+cd react-popup
+npm install
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The build script will place the compiled React app into the `extension/build` folder, making it accessible to the Chrome extension.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To rebuild any of the code in the extension/src folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+cd extension
+tsc
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing
 
-## Learn More
+If you'd like to contribute to the development of this Chrome extension, feel free to fork the repository and submit a pull request with your improvements.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The code for this extension is made available under a standard open-source license. Please check the LICENSE file for more information.
+
+## Contact
+
+For any queries or issues related to the extension, please open an issue in the repository issue tracker.
