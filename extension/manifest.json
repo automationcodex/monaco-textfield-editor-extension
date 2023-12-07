@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Monaco TextField Editor",
+    "description": "Enables editing of text fields with Monaco Editor",
+    "version": "1.0",
+    "background": {
+        "service_worker": "dist/background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "dist/content.js"
+            ]
+        }
+    ],
+    "commands": {
+        "edit-field-with-monaco": {
+            "suggested_key": {
+                "default": "Ctrl+M",
+                "mac": "Command+M"
+            },
+            "description": "Edit current text field"
+        }
+    },
+    "icons": {
+        "48": "icons/Icon-48.png",
+        "128": "icons/Icon-128.png",
+        "256": "icons/Icon-256.png"
+    }
+}

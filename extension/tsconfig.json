@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS", // This line is changed
+        "lib": [
+            "ES6",
+            "DOM"
+        ],
+        "sourceMap": true,
+        "outDir": "dist",
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": false,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "src/**/*.ts",
+        "../types/message.d.ts" // This line is added
+    ]
+}
