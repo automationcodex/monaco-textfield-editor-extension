@@ -4,32 +4,36 @@ Monaco TextField Editor is a Chrome extension that enables users to edit text fi
 
 ## Features
 
-- Use the Monaco Editor to edit HTML inputs and textareas
-- Support for multiple programming languages including JSON, JavaScript, TypeScript, HTML, CSS, Markdown, Python, XML, and Plain Text
-- Easily switch between different syntax highlighting
-- Context menu integration for quick access to the editor
-- Keyboard shortcut support to instantly open the editor
+- Utilize the Monaco Editor for enhanced editing in HTML inputs and textareas.
+- Supports multiple programming languages, including JSON, JavaScript, TypeScript, HTML, CSS, Markdown, Python, XML, and Plain Text.
+- Context menu integration for quick and easy access to the editor.
+- Keyboard shortcuts for instant editor opening (`Ctrl+M` or `Command+M` for Mac) and saving edits (`Ctrl+S`).
 
 ## Installation
 
-The extension is not listed in the Chrome Web Store; hence, it needs to be installed manually:
+Monaco TextField Editor is now available on the Chrome Web Store! Install it with just one click:
 
-1. Download the extension's source code and build the React popup application.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" in the upper right corner.
-4. Click on "Load unpacked" and select the `extension` folder where you built the extension.
-5. Once loaded, the extension will be available for use in Chrome.
+[Monaco TextField Editor on the Chrome Web Store](https://chromewebstore.google.com/detail/monaco-textfield-editor/jeikeiklgehbehjkhnbmcpbjlnpgnllp)
+
+Alternatively, you can still install it manually:
+
+1. Download or clone the extension's source code.
+2. Build the React popup application with the provided build scripts.
+3. Open Chrome and go to `chrome://extensions/`.
+4. Enable "Developer mode" in the upper right corner.
+5. Click on "Load unpacked" and select the `extension` folder where the extension files are located.
+6. The extension is now ready for use in Chrome.
 
 ## Usage
 
 - Right-click on any editable text field on a webpage and select "Edit with Monaco Textfield Editor" from the context menu.
-- Alternatively, use the keyboard shortcut `Ctrl+M` (or `Command+M` for Mac) to open the Monaco Editor for the currently focused text field.
-- Edit your text with enhanced features provided by the Monaco Editor.
-- Once you're done editing, click on "SAVE" or use the `Ctrl+S` shortcut to apply the changes to the original text field on the webpage.
+- Alternatively, press `Ctrl+M` (`Command+M` for Mac) to activate the Monaco Editor for the focused text field.
+- Enjoy advanced text editing features.
+- Save your changes with a click on "SAVE" or by pressing `Ctrl+S`.
 
 ## Development
 
-This extension uses TypeScript for the Chrome extension scripts and React for the popup editor interface, along with TailwindCSS for styling.
+This extension uses TypeScript for Chrome extension scripts and React for the popup editor interface, styled with TailwindCSS.
 
 ### Building the React Popup
 
@@ -52,12 +56,15 @@ tsc
 
 ## Contributing
 
-If you'd like to contribute to the development of this Chrome extension, feel free to fork the repository and submit a pull request with your improvements.
+Contributions to Monaco TextField Editor are welcome! Fork the repository and submit a pull request with your enhancements.
 
 ## License
 
-The code for this extension is made available under a standard open-source license. Please check the LICENSE file for more information.
+This project is licensed under standard open-source licenses. See the LICENSE file for more details.
 
 ## Contact
 
-For any queries or issues related to the extension, please open an issue in the repository issue tracker.
+For questions or issues regarding the extension, please open an issue in the [GitHub repository](https://github.com/automationcodex/monaco-textfield-editor-extension).
+```
+
+When updating the README, make sure to include the actual GitHub repository URL where it says `https://github.com/automationcodex/monaco-textfield-editor-extension`.
