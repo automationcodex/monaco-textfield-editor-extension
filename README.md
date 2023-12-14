@@ -58,6 +58,19 @@ tsc
 
 Contributions to Monaco TextField Editor are welcome! Fork the repository and submit a pull request with your enhancements.
 
+## Release Notes
+
+### Version 1.0
+
+- Initial release of Monaco TextField Editor.
+
+### Version 1.1
+
+- **New Feature**: Added a "Format" button to format the content within the Monaco Editor. The keyboard shortcut `Alt + Shift + F` can also be used for this action.
+- **New Feature**: Included a "Join Lines" button that joins all lines together. This functionality is triggered by the `Alt + Shift + D` keyboard shortcut.
+- **Enhancement**: The extension now automatically detects the language of the text field's content at startup.
+- **Enhancement**: It also automatically formats the content at startup, providing a clean and organized layout from the get-go.
+
 ## License
 
 This project is licensed under standard open-source licenses. See the LICENSE file for more details.
@@ -68,3 +81,4 @@ For questions or issues regarding the extension, please open an issue in the [Gi
 ```
 
 When updating the README, make sure to include the actual GitHub repository URL where it says `https://github.com/automationcodex/monaco-textfield-editor-extension`.
+

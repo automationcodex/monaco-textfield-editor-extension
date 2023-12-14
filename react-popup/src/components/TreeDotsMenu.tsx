@@ -1,30 +1,28 @@
 import { Fragment, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, EllipsisVerticalIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-export interface DropDownItem {
+export interface TreeDotsMenuItem {
     name: string;
-    value: string;
+    title?: string;
+    onClick: () => void;
 }
 
-export interface DropDownProps {
-    items: DropDownItem[];
-    selectedItem : DropDownItem;
-    setSelectedItem : (item: DropDownItem) => void;
+export interface ThreeDotsMenuProps {
+    items: TreeDotsMenuItem[];
 }
 
 
-export default function DropDown( { items, selectedItem, setSelectedItem } : DropDownProps) {
+export default function ThreeDotsMenu({ items }: ThreeDotsMenuProps) {
     return (
         <Menu as="div" className="relative inline-block text-left shrink-0">
             <div>
-                <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 bg-darkgray px-3 py-2 text-sm font-semibold text-gray-300 shadow-sm hover:bg-midgray">
-                    {selectedItem.name}
-                    <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-300" aria-hidden="true" />
+                <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 bg-darkgray  py-2 text-sm font-semibold text-gray-300 shadow-sm hover:bg-midgray">
+                    <EllipsisVerticalIcon className='text-gray-300 h-5 w-5 my-auto mx-2' />
                 </Menu.Button>
             </div>
 
@@ -41,14 +39,15 @@ export default function DropDown( { items, selectedItem, setSelectedItem } : Dro
                     <div className="py-1">
 
                         {items.map((item) => (
-                            <Menu.Item key={item.value}>
+                            <Menu.Item key={item.name}>
                                 {({ active }) => (
                                     <span
+                                        title={item.title}
                                         className={classNames(
                                             active ? 'bg-midgray' : '',
                                             'block px-4 py-2 text-sm text-gray-300 cursor-pointer'
                                         )}
-                                        onClick={() => setSelectedItem(item)}
+                                        onClick={() => item.onClick()}
                                     >
                                         {item.name}
                                     </span>

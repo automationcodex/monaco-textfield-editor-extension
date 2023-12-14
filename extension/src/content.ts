@@ -67,6 +67,8 @@ chrome.runtime.onMessage.addListener(async (message: Message<MessageAction>, sen
             const updateEvent = new Event('input', { bubbles: true });
             element.dispatchEvent(updateEvent);
 
+            elementMap.delete(sendTextMessage.data.elementId);
+
             break;
         }
         case "B2C_EDIT_CURRENT_FIELD": { // This is received when the user clicks the context menu item or presses the shortcut
